@@ -121,20 +121,25 @@ function Hero() {
 function Projects() {
 
   const projects = [
-    {
-      title: "IGL Esports System",
-      problem: "Tournament coordination conflicts",
-      solution: "Automated scheduling and voting system",
-      impact: "Improved workflow efficiency"
-    },
+  {
+    title: "IGL Esports System",
+    image: "/projects/igl.png",
+    problem: "Tournament coordination conflicts",
+    solution: "Automated scheduling and voting system",
+    impact: "Improved workflow efficiency",
+    tech: ["androidStudio", "kotlin", "System Design"]
+  },
 
-    {
-      title: "FF India Platform",
-      problem: "No centralized tournament handling",
-      solution: "Built admin dashboard system",
-      impact: "Enabled scalable operations"
-    }
-  ];
+  {
+    title: "FF India Platform",
+    image: "/projects/creatordashboard.png",
+    image2: "/projects/admindashboard.png",
+    problem: "No centralized tournament handling",
+    solution: "Built admin dashboard system",
+    impact: "Enabled scalable operations",
+    tech: ["React", "REST APIs", "Dashboard UI"]
+  }
+];
 
   return (
     <section
@@ -153,7 +158,12 @@ function Projects() {
   whileHover={{ scale: 1.03 }}
   transition={{ duration: 0.2 }}
   className="border border-gray-800 bg-white/5 backdrop-blur-sm p-6 rounded-2xl hover:border-white transition shadow-lg"
->
+> 
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
 
             <h3 className="text-xl font-semibold mb-4">
               {project.title}
@@ -170,6 +180,18 @@ function Projects() {
             <p className="text-green-400 text-sm">
               Impact: {project.impact}
             </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+
+  {project.tech.map((tech, i) => (
+    <span
+      key={i}
+      className="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300"
+    >
+      {tech}
+    </span>
+  ))}
+
+</div>
 
           </motion.div>
         ))}
@@ -273,32 +295,57 @@ function Services() {
 
 function Contact() {
   return (
-    <section 
-    id="contact"
-     className="px-6 py-24 text-center">
+    <section
+      id="contact"
+      className="px-6 py-24 text-center"
+    >
 
       <h2 className="text-4xl font-bold mb-4">
         Let’s Build Something Powerful
       </h2>
 
-      <p className="text-gray-400 mb-8">
+      <p className="text-gray-400 mb-10">
         Open for internships, freelance projects and collaborations.
       </p>
 
-      <button className="bg-white text-black px-8 py-3 rounded-full font-medium">
-        Contact Me
-      </button>
+      <form
+        action="https://formsubmit.co/jarahul989@gmail.com"
+        method="POST"
+        className="max-w-2xl mx-auto flex flex-col gap-4"
+      >
 
-      <p className="text-gray-600 text-sm mt-6">
-        jarahul989@gmail..com
-      </p>
-      <p className="text-gray-600 text-sm">
-  GitHub: github.com/usercreator005
-</p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          className="bg-white/5 border border-gray-800 rounded-xl p-4 outline-none"
+        />
 
-<p className="text-gray-600 text-sm">
-  LinkedIn: linkedin.com/in/rahul-kumar-jha
-</p>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          className="bg-white/5 border border-gray-800 rounded-xl p-4 outline-none"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="6"
+          required
+          className="bg-white/5 border border-gray-800 rounded-xl p-4 outline-none"
+        ></textarea>
+
+        <button
+          type="submit"
+          className="bg-white text-black py-4 rounded-xl font-semibold hover:scale-[1.02] transition"
+        >
+          Send Message
+        </button>
+
+      </form>
 
     </section>
   );
