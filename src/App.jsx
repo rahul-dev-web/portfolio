@@ -107,6 +107,10 @@ function Hero() {
           <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
             Hire Me
           </button>
+          <a href="/resume.pdf"download className="border border-gray-700 px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300"
+>
+  Download Resume
+</a>
 
         </div>
 
