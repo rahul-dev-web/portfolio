@@ -81,12 +81,12 @@ function Navbar() {
 function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
-      <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full"></div>
+      <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full pointer-events-none"></div>
       <motion.div
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
-  className="max-w-3xl"
+  className="max-w-3xl relative z-10"
 >
 
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -107,8 +107,7 @@ function Hero() {
           <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
             Hire Me
           </button>
-          <a href="/resume.pdf"download className="border border-gray-700 px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300"
->
+          <a href="/resume.pdf"download className="border border-gray-700 px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
   Download Resume
 </a>
 
