@@ -9,6 +9,7 @@ export default function App() {
   <Skills />
   <Services />
   <Contact />
+  <Footer />
 </div>
   );
 }
@@ -42,6 +43,25 @@ function Navbar() {
           </a>
 
         </div>
+        <div className="hidden md:flex gap-4 items-center text-gray-400 text-sm">
+
+  <a
+    href="https://github.com/rahul-dev-web"
+    target="_blank"
+    className="hover:text-white"
+  >
+    GitHub
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/rahul-kumar-jha-web-dev"
+    target="_blank"
+    className="hover:text-white"
+  >
+    LinkedIn
+  </a>
+
+</div>
 
         {/* Mobile Button */}
         <button
@@ -93,25 +113,36 @@ function Hero() {
          I Build Scalable Web Systems & Modern Digital Products
         </h1>
 
-        <p className="text-gray-400 mt-6 text-base md:text-lg px-2">
-          Full Stack Developer focused on dashboards,
-          backend systems and scalable applications.
-        </p>
+        <p className="text-gray-400 mt-6 text-base md:text-lg px-2 leading-relaxed">
+  Full Stack Developer specializing in scalable web applications,
+  backend architecture, admin dashboards, REST APIs, and MySQL-powered systems.
+</p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
 
-          <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 transition duration-300">
-            View Projects
-          </button>
+  <a
+    href="#projects"
+    className="bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 transition duration-300"
+  >
+    View Projects
+  </a>
 
-          <button className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
-            Hire Me
-          </button>
-          <a href="/resume.pdf"download className="border border-gray-700 px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
-  Download Resume
-</a>
+  <a
+    href="#contact"
+    className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300"
+  >
+    Hire Me
+  </a>
 
-        </div>
+  <a
+    href="/resume.pdf"
+    download
+    className="border border-gray-700 px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300"
+  >
+    Download Resume
+  </a>
+
+</div>
 
       </motion.div>
 
@@ -206,14 +237,18 @@ function Projects() {
 }
 function Skills() {
 
-  const skills = [
-    "React & Frontend Systems",
-    "Node.js Backend Development",
-    "REST API Integration",
-    "Dashboard Engineering",
-    "Role-Based Access Systems",
-    "Scalable Web Architecture"
-  ];
+ const skills = [
+  "React.js",
+  "JavaScript",
+  "Node.js",
+  "Express.js",
+  "MySQL",
+  "REST APIs",
+  "Tailwind CSS",
+  "System Design",
+  "Admin Dashboards",
+  "Responsive UI Design"
+];
 
   return (
     <section
@@ -307,9 +342,11 @@ function Contact() {
         Let’s Build Something Powerful
       </h2>
 
-      <p className="text-gray-400 mb-10">
-        Open for internships, freelance projects and collaborations.
-      </p>
+      <p className="text-gray-400 mb-10 max-w-xl mx-auto leading-relaxed">
+  Currently open for internships, freelance opportunities,
+  backend development projects, dashboard systems,
+  and scalable web application collaborations.
+</p>
 
       <form
         action="https://formsubmit.co/jarahul989@gmail.com"
@@ -351,5 +388,43 @@ function Contact() {
       </form>
 
     </section>
+  );
+}
+function Footer() {
+  return (
+    <footer className="border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
+
+      <p>
+        © 2026 Rahul K. Jha — Full Stack Developer
+      </p>
+
+      <div className="flex justify-center gap-6 mt-4">
+
+        <a
+          href="https://github.com/rahul-dev-web"
+          target="_blank"
+          className="hover:text-white"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/rahul-kumar-jha-web-dev"
+          target="_blank"
+          className="hover:text-white"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:jarahul989@gmail.com"
+          className="hover:text-white"
+        >
+          Email
+        </a>
+
+      </div>
+
+    </footer>
   );
 }
