@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export default function App() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -393,38 +394,33 @@ function Contact() {
 function Footer() {
   return (
     <footer className="border-t border-gray-800 py-8 text-center text-gray-500 text-sm">
-
-      <p>
-        © 2026 Rahul K. Jha — Full Stack Developer
-      </p>
-
+      <p>© 2026 Rahul K. Jha — Full Stack Developer</p>
+      
+      {/* Footer Social Links with Logos */}
       <div className="flex justify-center gap-6 mt-4">
-
         <a
           href="https://github.com/rahul-dev-web"
           target="_blank"
-          className="hover:text-white"
+          rel="noopener noreferrer"
+          className="hover:text-white flex items-center gap-1.5 transition"
         >
-          GitHub
+          <FaGithub className="text-base" /> GitHub
         </a>
-
         <a
           href="https://www.linkedin.com/in/rahul-kumar-jha-web-dev"
           target="_blank"
-          className="hover:text-white"
+          rel="noopener noreferrer"
+          className="hover:text-white flex items-center gap-1.5 transition"
         >
-          LinkedIn
+          <FaLinkedin className="text-base" /> LinkedIn
         </a>
-
         <a
           href="mailto:jarahul989@gmail.com"
-          className="hover:text-white"
+          className="hover:text-white flex items-center gap-1.5 transition"
         >
-          Email
+          <FaEnvelope className="text-base" /> Email
         </a>
-
       </div>
-
     </footer>
   );
 }
