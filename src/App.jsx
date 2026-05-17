@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { image } from "framer-motion/client";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export default function App() {
@@ -173,7 +174,18 @@ function Projects() {
     solution: "Built admin dashboard system",
     impact: "Enabled scalable operations",
     tech: ["React", "REST APIs", "Dashboard UI"]
+  },
+
+  { title: "Full Stack Auth System", 
+    image: "/projects/loginpage.png",
+    image2: "/projects/registerpage.png",
+    image3: "/projects/mysqldb.png",
+    problem: "Need for secure authentication and protected user systems", 
+    solution: "Built JWT authentication with protected routes and role-based access control",
+    impact: "Implemented scalable authentication architecture for modern web applications", 
+    tech: [ "React", "Node.js", "Express", "MySQL", "JWT", "REST APIs" ] 
   }
+
 ];
 
   return (
@@ -196,7 +208,14 @@ function Projects() {
 > 
               <img
                 src={project.image}
-                alt={project.title}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+               <img
+                src={project.image2}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+               <img
+                src={project.image3}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />
 
