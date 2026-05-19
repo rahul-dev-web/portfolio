@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { image } from "framer-motion/client";
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope,FaWhatsapp } from "react-icons/fa";
 export default function App() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -62,6 +62,15 @@ function Navbar() {
   >
     LinkedIn
   </a>
+  <a
+    href="https://whatsapp.com/channel/0029VbCaUAIKQuJSdCcDnL2m"
+    target="_blank"
+    className="hover:text-green-400 transition"
+  >
+
+    WhatsApp Channel 
+    </a>
+
 
 </div>
 
@@ -143,6 +152,16 @@ function Hero() {
   >
     Download Resume
   </a>
+  <a
+    href="https://whatsapp.com/channel/0029VbCaUAIKQuJSdCcDnL2m"
+    target="_blank"
+    className="border border-green-500 text-green-400 px-6 py-3 rounded-full hover:bg-green-500 hover:text-black transition duration-300"
+
+  >
+
+    Join WhatsApp Channel 
+    </a>
+
 
 </div>
 
@@ -440,6 +459,16 @@ function Footer() {
         >
           <FaEnvelope className="text-base" /> Email
         </a>
+        <a
+          href="https://whatsapp.com/channel/0029VbCaUAIKQuJSdCcDnL2m"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-green-400 flex items-center gap-1.5 transition"
+
+      >
+
+      <FaWhatsapp className="text-base" /> Channel </a>
+
       </div>
     </footer>
   );
